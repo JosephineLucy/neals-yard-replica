@@ -1,11 +1,18 @@
+/* nyr brand colour: #001E62 */
+
 * {
     margin: 0;
     padding: 0;
 }
 
-.header-main{
-    height: 7rem;
-    width: 100%;
+.page-width {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.header-main {
+    display: flex;
+    height: 7rem;;
 }
 
 .header-left {
@@ -14,44 +21,30 @@
     border: solid lightblue 2px;
     display: flex;
     align-items: center;
-    padding-left: 2rem;
+    justify-content: left;
 }
 
-.logo-and-brandName {
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem;
-}
+.header-logo {
+    height: 6rem;
+} 
 
-.logo {
-    height: 5rem;
-    width: 5rem;
-    border-radius: 50%;
-    border: solid #001d61 2px;
-    outline-offset: -0.3rem;
-    outline: #001E62 1px solid;
+.header-right {
+    height: 100%;
+    width: 50%;
+    border: solid lightblue 2px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
 }
 
-.logo-img {
-    height: 3.55rem;
+.header-icon {
+    height: 1.8rem;
+    margin: 0.5rem;
 }
 
-.brandName {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0.8rem;
+/* responsive */
+@media only screen and (min-width: 769px){
+.page-width {
+    padding: 0 40px;
 }
-
-.brand-title {
-    color: #001E62;
-    font-size: 1.4rem;
-}
-
-.brand-desc {
-    font-size: 0.9rem;
 }

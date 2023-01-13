@@ -1,21 +1,26 @@
 import '../css/header.css'
-import logo from '../logo.png'
+import logo from '../images/logo.png'
+import userIcon from '../images/user.jpeg'
+import search from '../images/search.jpeg'
+import burger from '../images/burger-menu.jpeg'
+import bag from '../images/bag.jpeg'
 
 const Header = () => {
-    return (<section className="header-main">
-        <section className='header-left'>
-            {/* <div className='logo-and-brandName'>
-            <div className='logo'>
-                <img className='logo-img' src={logo} alt="logo" />
-            </div>
-            <div className='brandName'>
-                <p className='brand-title'>NEAL'S YARD REMEDIES</p>
-                <p className='brand-desc'>Natural & organic health & beauty</p>
-            </div>
-            </div> */}
-            <img src={logo} alt="logo" />
-        </section>
-    </section> );
+    return (
+        <div className='page-width'>
+            <section className='header-main'>
+                <section className='header-left'>
+                    <img className='header-logo' src={logo} alt="logo" />
+                </section>
+                <section className='header-right'>
+                    <img className='header-icon' src={userIcon} alt="userIcon" />
+                    <img className='header-icon' src={search} alt="searchIcon" />
+                    <img className='header-icon' src={burger} alt="burgerMenu" />
+                    <img className='header-icon' src={bag} alt="shoppingBag" />
+                </section>
+            </section>
+        </div> 
+    );
 }
  
 export default Header;
