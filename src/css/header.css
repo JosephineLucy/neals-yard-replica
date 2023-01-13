@@ -31,7 +31,13 @@
     border: solid #001d61 2px;
     outline-offset: -0.3rem;
     outline: #001E62 1px solid;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-img {
+    height: 3.55rem;
 }
 
 .brandName {
@@ -43,4 +49,9 @@
 
 .brand-title {
     color: #001E62;
+    font-size: 1.4rem;
+}
+
+.brand-desc {
+    font-size: 0.9rem;
 }
