@@ -8,6 +8,13 @@ import bag from '../images/bag.jpeg'
 const Header = () => {
     return (
         <div className='page-width'>
+            <section className='header-toolbar'>
+                <p>United Kingdom (GBP £) </p>
+                <p>Loyalty</p>
+                <p>Accessibility</p>
+                <p>Contact us</p>
+                <p>Help</p>
+            </section>
             <section className='header-main'>
                 <section className='header-left'>
                     <img className='header-logo' src={logo} alt="logo" />
