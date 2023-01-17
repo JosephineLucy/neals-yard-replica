@@ -1,0 +1,18 @@
+{
+    "currencyList": [
+        "United Kingdom (GBP £)",
+        "United States (USD $)", 
+        "China (CNY ¥)",
+        "Japan (JPY ¥)",
+        "Taiwan (NTD $)",
+        "Hong Kong (HKD $)",
+        "Malaysia (RM)",
+        "Thailand (THB ฿)",
+        "Philippines (PHP ₱)",
+        "Israel (ILS ₪)",
+        "Sweden (SEK kr)",
+        "Greece (EUR €)",
+        "Canada (CAD $)",
+        "Singapore (SGD $)"
+    ]
+}
