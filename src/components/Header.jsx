@@ -14,10 +14,10 @@ const Header = () => {
 
 
     return (
-        <div className='page-width'>
+        <div>
             <section className='header-toolbar'>
                 <button onClick={(e)=> setCurrOpen(!currOpen)} className='select-currency'>{selectedCurr}</button>
-                { currOpen && <div className='currency-list'>{currencyList.map((currency)=><button className="select-currency" key={currency}>{currency}</button>
+                { currOpen && <div className='currency-list'>{currencyList.map((currency)=><button className="currencies" key={currency}>{currency}</button>
                 )}</div>}
                 <p>Loyalty</p>
                 <p>Accessibility</p>
