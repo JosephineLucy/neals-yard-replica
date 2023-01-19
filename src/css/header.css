@@ -57,7 +57,7 @@
 
 
 /* responsive */
-@media only screen and (min-width: 769px){
+@media only screen and (min-width: 1272px){
 .header-toolbar{
     display: flex;
     align-items: flex-end;
@@ -70,21 +70,36 @@
 }
 
 section.header-toolbar > * {
-    padding: 0.45rem;
     color: #001E62;
     cursor:pointer;
 }
 
 .select-currency{
     font-size: 0.8rem;
+    position: relative;
 }
+
+/*  */
+
+
+.header-toolbar li {
+    display: inline-block;
+    padding: 0.7rem;
+}
+
+.header-toolbar p {
+    display: block;
+}
+
+.header-toolbar li > ul li {
+    display: block;
+  }
+
+/*  */
 
 .currency-list{
     position:absolute;
     height:fit-content;
-    width: 300px;
-    top: 30px;
-    right: 95px;
     min-height: 92px;
     max-height: 60vh;
     overflow-y: auto;
@@ -93,5 +108,12 @@ section.header-toolbar > * {
 
 .currencies {
     font-size: 0.8rem;
+    display: block;
 }
+}
+
+@media only screen and (max-width:769px){
+    .header-logo {
+        height: 3.3rem;
+    } 
 }
