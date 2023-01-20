@@ -55,6 +55,15 @@
     cursor:pointer;
 }
 
+.nav-container {
+    display: none;
+}
+
+.announcement-bar{
+    height: 2rem;
+    background-color: #a4aac1;
+}
+
 
 /* responsive */
 @media only screen and (min-width: 1272px){
@@ -110,6 +119,13 @@ section.header-toolbar > * {
     font-size: 0.8rem;
     display: block;
 }
+
+.nav-container {
+    display: block;
+    height: 3rem;
+    width: 100%;
+    background-color: #001E62;
+}
 }
 
 @media only screen and (max-width:769px){
@@ -117,3 +133,4 @@ section.header-toolbar > * {
         height: 3.3rem;
     } 
 }
+

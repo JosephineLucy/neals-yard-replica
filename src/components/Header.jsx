@@ -69,6 +69,8 @@ const Header = () => {
           <img className="header-icon" src={bag} alt="shoppingBag" />
         </section>
       </section>
+      <div className="nav-container"></div>
+      <div className="announcement-bar"></div>
     </div>
   );
 };
