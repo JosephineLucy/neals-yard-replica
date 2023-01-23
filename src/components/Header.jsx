@@ -9,6 +9,18 @@ import { useState } from "react";
 
 const Header = () => {
   const currencyList = currencies.currencyList;
+  const navItems = [
+    "Best Sellers",
+    "Offers",
+    "Skincare",
+    "Bath & Body",
+    "Mother & Baby",
+    "Gifts",
+    "Aromatherapy",
+    "Wellbeing",
+    "Therapies",
+    "About Us",
+  ];
   const [selectedCurr, setSelectedCurr] = useState(currencyList[0]);
   const [currOpen, setCurrOpen] = useState(false);
 
@@ -17,12 +29,24 @@ const Header = () => {
     setCurrOpen(false);
   }
 
+  // window.addEventListener("click", (event) => {
+  //   const openedCurrs = document.getElementsByClassName("currency-list");
+  //   console.log(openedCurrs, "<<<openedCurrs");
+  //   if (
+  //     event.target !== openedCurrs &&
+  //     event.target.parentNode !== openedCurrs
+  //   ) {
+  //     console.log("yo yo yo");
+  //   }
+  // });
+
   return (
     <div>
       <section className="header-toolbar">
         <ul>
           <li>
             <p
+              align="right"
               onClick={(e) => setCurrOpen(!currOpen)}
               className="select-currency"
             >
@@ -69,7 +93,13 @@ const Header = () => {
           <img className="header-icon" src={bag} alt="shoppingBag" />
         </section>
       </section>
-      <div className="nav-container"></div>
+      <div className="nav-container">
+        {navItems.map((item) => (
+          <p key={item} className="nav-item">
+            {item}
+          </p>
+        ))}
+      </div>
       <div className="announcement-bar"></div>
     </div>
   );

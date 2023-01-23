@@ -1,9 +1,7 @@
-import '../css/productGallery.css'
+import "../css/productGallery.css";
 
 const ProductGallery = () => {
-    return ( <div className="product-gallery">
+  return <div className="product-gallery"></div>;
+};
 
-    </div> );
-}
- 
 export default ProductGallery;
