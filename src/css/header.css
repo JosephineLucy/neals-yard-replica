@@ -59,9 +59,16 @@
     display: none;
 }
 
-.announcement-bar{
-    height: 2rem;
+.announcement-bar > p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
     background-color: #a4aac1;
+    color: white;
+    text-decoration: underline;
+    font-size: 0.75rem;
+    cursor: pointer;
 }
 
 

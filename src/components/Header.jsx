@@ -5,7 +5,7 @@ import search from "../images/search.jpeg";
 import burger from "../images/burger-menu.jpeg";
 import bag from "../images/bag.jpeg";
 import currencies from "../currencies.json";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Header = () => {
   const currencyList = currencies.currencyList;
@@ -21,13 +21,38 @@ const Header = () => {
     "Therapies",
     "About Us",
   ];
+  const announcements = [
+    "CURATED WELLBEING BUNDLES AT UP TO 33% OFF",
+    "FREE Hand Rub when you spend £30",
+    "20% OFF ESSENTIAL OILS",
+    "FREE 300ml Shower Gel when you spend £50",
+  ];
   const [selectedCurr, setSelectedCurr] = useState(currencyList[0]);
   const [currOpen, setCurrOpen] = useState(false);
+  const [announcementIndex, setAnnouncementIndex] = useState(0);
+  const [announcement, setAnnouncement] = useState(announcementIndex);
 
   function handleSelectCurr(str) {
     setSelectedCurr(str);
     setCurrOpen(false);
   }
+
+  useEffect(() => {
+    console.log("counting", `current index pos: ${announcementIndex}`);
+    const interval = setInterval(() => {
+      setAnnouncementIndex(
+        (prevAnnouncementIndex) => prevAnnouncementIndex + 1
+      );
+      if (announcementIndex < announcements.length) {
+        setAnnouncement(announcements[announcementIndex]);
+      } else {
+        setAnnouncementIndex(0);
+        setAnnouncement(announcements[announcementIndex]);
+      }
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [announcementIndex]);
 
   // window.addEventListener("click", (event) => {
   //   const openedCurrs = document.getElementsByClassName("currency-list");
@@ -100,7 +125,9 @@ const Header = () => {
           </p>
         ))}
       </div>
-      <div className="announcement-bar"></div>
+      <div className="announcement-bar">
+        <p>{announcement}</p>
+      </div>
     </div>
   );
 };
