@@ -1,24 +1,13 @@
 .product-gallery {
-    margin: 8px 40px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.product-card {
-    height:fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 0.5rem;
-    min-width: 10rem;
-    max-width: 20rem;
+  margin: 8px 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .product-card > * {
-    width: 80%;
-    text-align: center;
-    padding: 0.3rem 0;
-    cursor: pointer;
+  width: 80%;
+  text-align: center;
+  padding: 0.3rem 0;
+  cursor: pointer;
 }

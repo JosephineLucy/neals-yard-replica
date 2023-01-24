@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../css/productGallery.css";
+import Product from "./Product";
 
 const ProductGallery = () => {
   const [products, setProducts] = useState(null);
@@ -20,16 +21,12 @@ const ProductGallery = () => {
       });
   }, []);
 
+  if (isLoading) return <p>loading</p>;
   return (
     <div className="product-gallery">
-      {!isLoading &&
-        products.map((product) => (
-          <div className="product-card" key={product.id}>
-            <img src={product.image_url} alt={product.title} />
-            <p>{product.title}</p>
-            <h3>{product.price}</h3>
-          </div>
-        ))}
+      {products.map((product) => (
+        <Product productInfo={product} />
+      ))}
     </div>
   );
 };
