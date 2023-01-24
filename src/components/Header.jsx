@@ -36,7 +36,7 @@ const Header = () => {
   //     event.target !== openedCurrs &&
   //     event.target.parentNode !== openedCurrs
   //   ) {
-  //     console.log("yo yo yo");
+  //     console.log("clicked");
   //   }
   // });
 
