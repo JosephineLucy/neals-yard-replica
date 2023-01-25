@@ -1,4 +1,4 @@
-import "../css/collectionsTab.css";
+import "./CollectionsTab.css";
 
 const CollectionsTab = () => {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
-import "./styled.css";
+import "./ProductCard.css";
 
-function Product({ productInfo }) {
+function ProductCard({ productInfo }) {
   return (
     <div className="product-card" key={productInfo.id}>
       <img
@@ -15,4 +15,4 @@ function Product({ productInfo }) {
   );
 }
 
-export default Product;
+export default ProductCard;

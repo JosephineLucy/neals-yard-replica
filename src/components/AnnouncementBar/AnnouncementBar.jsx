@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
-import { announcements } from "../Data/Announcement";
+import { announcements } from "../../componentData/componentData";
+import "./AnnouncementBar.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 

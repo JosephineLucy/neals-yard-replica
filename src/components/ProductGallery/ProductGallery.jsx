@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import "../css/productGallery.css";
-import Product from "./Product";
+import "./ProductGallery.css";
+import ProductCard from "../ProductCard/ProductCard";
 
 const ProductGallery = () => {
   const [products, setProducts] = useState(null);
@@ -25,7 +25,7 @@ const ProductGallery = () => {
   return (
     <div className="product-gallery">
       {products.map((product) => (
-        <Product productInfo={product} />
+        <ProductCard key={product.id} productInfo={product} />
       ))}
     </div>
   );

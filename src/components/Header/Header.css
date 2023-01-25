@@ -1,0 +1,77 @@
+/* nyr brand colour: #001E62 */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  border: 0;
+}
+
+.header-main {
+  display: flex;
+  height: 7rem;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.header-left {
+  height: 100%;
+  max-width: 700px;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 50%;
+}
+
+.header-logo {
+  max-height: 6rem;
+  min-height: 1rem;
+  cursor: pointer;
+}
+
+.header-right {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  max-width: 700px;
+}
+
+.header-icon {
+  height: 1.8rem;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.nav-container {
+  display: none;
+}
+
+/* responsive */
+@media only screen and (min-width: 1272px) {
+  .nav-container {
+    display: flex;
+    height: 3rem;
+    background-color: #001e62;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 40px;
+  }
+
+  .nav-item {
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .header-logo {
+    height: 3.3rem;
+  }
+}

@@ -1,8 +1,0 @@
-.hero-container {
-    height: 20rem;
-    background-image: url('../images/floral-img.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    cursor: pointer;
-}

@@ -1,0 +1,14 @@
+.announcement-bar {
+  background-color: #a4aac1;
+}
+
+.announcement-bar > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.5rem;
+  color: white;
+  text-decoration: underline;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
