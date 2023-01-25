@@ -1,8 +1,22 @@
-.hero-container {
-  height: 20rem;
-  background-image: url("../../images/floral-img.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+/* .hero-container {
+  height: 2rem;
   cursor: pointer;
+  border: solid pink 2px;
+  height: 500px;
+  overflow: hidden;
+} */
+
+.hero-container-img {
+  cursor: pointer;
+  border: solid pink 2px;
+  height: 500px;
+  width: 50px;
+  /* overflow: hidden; */
+}
+
+.hero-container > img {
+  /* height: 100%;
+  width: 100%; */
+  border: solid yellow 2px;
+  object-fit: cover;
 }

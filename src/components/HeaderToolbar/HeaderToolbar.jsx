@@ -1,11 +1,12 @@
-import { useState } from "react";
 import { currencyList } from "../../componentData/componentData";
 import "./HeaderToolbar.css";
 
-const HeaderToolbar = () => {
-  const [selectedCurr, setSelectedCurr] = useState(currencyList[0]);
-  const [currOpen, setCurrOpen] = useState(false);
-
+const HeaderToolbar = ({
+  selectedCurr,
+  setSelectedCurr,
+  currOpen,
+  setCurrOpen,
+}) => {
   function handleSelectCurr(str) {
     setSelectedCurr(str);
     setCurrOpen(false);

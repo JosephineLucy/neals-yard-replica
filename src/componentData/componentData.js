@@ -2,6 +2,8 @@ import userIcon from "../images/user.jpeg";
 import search from "../images/search.jpeg";
 import burger from "../images/burger-menu.jpeg";
 import bag from "../images/bag.jpeg";
+import floral from "../images/floral-img.jpg";
+import soap from "../images/soap.jpg";
 
 const currencyList = [
   "United Kingdom (GBP £)",
@@ -62,4 +64,15 @@ const headerIcons = [
   },
 ];
 
-export { navItems, announcements, currencyList, headerIcons };
+const heroImages = [
+  {
+    id: 1,
+    image: floral,
+  },
+  {
+    id: 2,
+    image: soap,
+  },
+];
+
+export { navItems, announcements, currencyList, headerIcons, heroImages };

@@ -4,10 +4,15 @@ import HeaderToolbar from "../HeaderToolbar/HeaderToolbar";
 import AnnouncementBar from "../AnnouncementBar/AnnouncementBar";
 import { navItems, headerIcons } from "../../componentData/componentData";
 
-const Header = () => {
+const Header = ({ selectedCurr, setSelectedCurr, currOpen, setCurrOpen }) => {
   return (
     <nav>
-      <HeaderToolbar />
+      <HeaderToolbar
+        selectedCurr={selectedCurr}
+        setSelectedCurr={setSelectedCurr}
+        currOpen={currOpen}
+        setCurrOpen={setCurrOpen}
+      />
       <section className="header-main">
         <section className="header-left">
           <img className="header-logo" src={logo} alt="logo" />

@@ -3,18 +3,26 @@ import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import CollectionsTab from "./components/CollectionsTab/CollectionsTab";
 import ProductGallery from "./components/ProductGallery/ProductGallery";
+import { useState } from "react";
+import { currencyList } from "./componentData/componentData";
 
 function App() {
+  const [selectedCurr, setSelectedCurr] = useState(currencyList[0]);
+  const [currOpen, setCurrOpen] = useState(false);
   function handleClick(e) {
-    // console.log(e.target, "<<<<e in handleclick");
-    console.log(e.target.innerText === "United Kingdom (GBP £)");
+    if (!currencyList.includes(e.target.innerText)) {
+      setCurrOpen(false);
+    }
   }
-  //p.select-currency
-  //p.currencies
 
   return (
     <div className="App" onClick={(e) => handleClick(e)}>
-      <Header />
+      <Header
+        selectedCurr={selectedCurr}
+        setSelectedCurr={setSelectedCurr}
+        currOpen={currOpen}
+        setCurrOpen={setCurrOpen}
+      />
       <Hero />
       <CollectionsTab />
       <ProductGallery />
