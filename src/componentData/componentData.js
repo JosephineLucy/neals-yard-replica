@@ -2,8 +2,8 @@ import userIcon from "../images/user.jpeg";
 import search from "../images/search.jpeg";
 import burger from "../images/burger-menu.jpeg";
 import bag from "../images/bag.jpeg";
-import floral from "../images/floral-img.jpg";
-import soap from "../images/soap.jpg";
+import showerGel from "../images/hero-showergel.webp";
+import handrub from "../images/hero-handrub.webp";
 
 const currencyList = [
   "United Kingdom (GBP £)",
@@ -22,18 +22,6 @@ const currencyList = [
   "Singapore (SGD $)",
 ];
 
-const navItems = [
-  "Best Sellers",
-  "Offers",
-  "Skincare",
-  "Bath & Body",
-  "Mother & Baby",
-  "Gifts",
-  "Aromatherapy",
-  "Wellbeing",
-  "Therapies",
-  "About Us",
-];
 const announcements = [
   { title: "CURATED WELLBEING BUNDLES AT UP TO 33% OFF", id: 1 },
   { title: "FREE Hand Rub when you spend £30", id: 2 },
@@ -67,12 +55,14 @@ const headerIcons = [
 const heroImages = [
   {
     id: 1,
-    image: floral,
+    image: showerGel,
+    title: "Shower Gel",
   },
   {
     id: 2,
-    image: soap,
+    image: handrub,
+    title: "Handrub",
   },
 ];
 
-export { navItems, announcements, currencyList, headerIcons, heroImages };
+export { announcements, currencyList, headerIcons, heroImages };

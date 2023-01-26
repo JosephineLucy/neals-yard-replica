@@ -13,14 +13,15 @@ const Hero = () => {
     autoplay: true,
     speed: 1200,
     autoplaySpeed: 10000,
+    adaptiveHeight: true,
   };
 
   return (
     <div className="hero-container">
-      <Slider {...settings}>
+      <Slider {...settings} className="img-carousel">
         {heroImages.map((item) => (
-          <div className="hero-container-img">
-            <img src={item.image} key={item.id} className="hero-img"></img>
+          <div className="hero-container-img" key={item.id}>
+            <img src={item.image} alt={item.title} className="hero-img" />
           </div>
         ))}
       </Slider>

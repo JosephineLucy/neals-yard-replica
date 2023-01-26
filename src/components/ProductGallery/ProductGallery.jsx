@@ -21,7 +21,7 @@ const ProductGallery = () => {
       });
   }, []);
 
-  if (isLoading) return <p>loading</p>;
+  if (isLoading) return <p>loading, please wait...</p>;
   return (
     <div className="product-gallery">
       {products.map((product) => (

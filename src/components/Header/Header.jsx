@@ -2,7 +2,8 @@ import "./Header.css";
 import logo from "../../images/logo.png";
 import HeaderToolbar from "../HeaderToolbar/HeaderToolbar";
 import AnnouncementBar from "../AnnouncementBar/AnnouncementBar";
-import { navItems, headerIcons } from "../../componentData/componentData";
+import { headerIcons } from "../../componentData/componentData";
+import NavBar from "../NavBar/NavBar";
 
 const Header = ({ selectedCurr, setSelectedCurr, currOpen, setCurrOpen }) => {
   return (
@@ -30,13 +31,7 @@ const Header = ({ selectedCurr, setSelectedCurr, currOpen, setCurrOpen }) => {
           })}
         </section>
       </section>
-      <div className="nav-container">
-        {navItems.map((item) => (
-          <p key={item} className="nav-item">
-            {item}
-          </p>
-        ))}
-      </div>
+      <NavBar />
       <AnnouncementBar />
     </nav>
   );

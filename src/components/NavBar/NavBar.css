@@ -1,0 +1,32 @@
+.nav-container {
+  display: none;
+}
+
+/* responsive */
+@media only screen and (min-width: 1272px) {
+  .nav-container {
+    display: flex;
+    height: 3rem;
+    background-color: #001e62;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 40px;
+  }
+
+  .nav-item {
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s all linear;
+  }
+
+  .nav-item:hover {
+    text-decoration: underline white;
+    transition: 0.2s all linear;
+  }
+
+  .nav-best-sellers {
+    /* display: block; */
+    color: white;
+  }
+}
