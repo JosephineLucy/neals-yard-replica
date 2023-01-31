@@ -1,11 +1,16 @@
 .collections-tab {
-    display: flex;
-    justify-content: center;
-    height: 2rem;
-    padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+  height: 2rem;
+  padding: 3rem 0;
 }
 
 .collections-tab > p {
-    padding: 0 1rem;
-    cursor: pointer;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+
+.collections-tab .selected {
+  color: #001e62;
+  border-bottom: #001e62 3px solid;
 }

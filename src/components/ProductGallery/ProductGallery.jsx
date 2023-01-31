@@ -1,32 +1,55 @@
-import { useEffect, useState } from "react";
+// import useFetch from "../../useFetch";
 import "./ProductGallery.css";
 import ProductCard from "../ProductCard/ProductCard";
+import { useEffect, useState } from "react";
 
-const ProductGallery = () => {
-  const [products, setProducts] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+const ProductGallery = ({ essentialOils, bestSellers }) => {
+  const [filteredProducts, setFilteredProducts] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     fetch("http://localhost:3000/products")
       .then((response) => {
-        const results = response.json();
-        return results;
+        if (!response.ok) {
+          throw Error("Sorry, could not fetch the data for that resource.");
+        }
+        const products = response.json();
+        return products;
       })
-      .then((results) => {
-        setProducts(results);
-        setIsLoading(false);
+      .then((products) => {
+        if (bestSellers) {
+          const bests = products.filter(
+            (product) => product.bestSeller === true
+          );
+          setFilteredProducts(bests);
+        } else {
+          const ess = products.filter(
+            (product) => product.essentialOil === true
+          );
+          setFilteredProducts(ess);
+        }
       })
       .catch((err) => {
-        console.log(err, "<<<<error");
+        if (err.name === "AbortError") {
+          console.log("fetch aborted");
+        } else {
+          setError(err.message);
+        }
+      })
+      .then(() => {
+        setLoading(false);
       });
-  }, []);
+  }, [bestSellers, essentialOils]);
 
-  if (isLoading) return <p>loading, please wait...</p>;
   return (
     <div className="product-gallery">
-      {products.map((product) => (
-        <ProductCard key={product.id} productInfo={product} />
-      ))}
+      {error && <p>{error}</p>}
+      {loading && <p>loading...</p>}
+      {filteredProducts &&
+        filteredProducts.map((product) => (
+          <ProductCard key={product.id} productInfo={product} />
+        ))}
     </div>
   );
 };

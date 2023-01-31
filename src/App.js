@@ -1,10 +1,8 @@
 import React from "react";
 import Header from "./components/Header/Header";
-import Hero from "./components/Hero/Hero";
-import CollectionsTab from "./components/CollectionsTab/CollectionsTab";
-import ProductGallery from "./components/ProductGallery/ProductGallery";
 import { useState } from "react";
 import { currencyList } from "./componentData/componentData";
+import Home from "./components/Home/Home";
 
 function App() {
   const [selectedCurr, setSelectedCurr] = useState(currencyList[0]);
@@ -23,9 +21,7 @@ function App() {
         currOpen={currOpen}
         setCurrOpen={setCurrOpen}
       />
-      <Hero />
-      <CollectionsTab />
-      <ProductGallery />
+      <Home />
     </div>
   );
 }
